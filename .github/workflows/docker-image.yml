@@ -17,6 +17,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Set execute permission for entrypoint.sh
+      run: chmod +x entrypoint.sh
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
